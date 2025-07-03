@@ -1,3 +1,4 @@
+Sysopt(1, 1, -1)
 
 gInitFlag = 0
 gNetInitedFlag = 0
@@ -71,11 +72,13 @@ function task2_main()
 		end
 		delay(1)
 		// 外部操作区域
+		
 		btn_emerged()
 
-		ext_StartTest(50)   	// 开始测试
+		ext_StartTest(30)   	// 开始测试
 		ext_StartReset(50) 	// 开始复位
 		ext_StopTest(50)	// 停止测试
+		
 		
 		// 模式选择
 		gModeOldState = gModeState
@@ -102,6 +105,7 @@ function task3_main()
 		end
 		// 急停触发状态
 		btn_emerged()
+		check_zero()
 	end
 end
 

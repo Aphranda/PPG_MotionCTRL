@@ -116,5 +116,14 @@ function motion_open(param1)
 	return rtn
 end
 
+function check_zero(param1) 
+	pos_Zero = mc.getpos(1,0)
+	if (pos_Zero +60)<0.1 then 
+		mc.setdo(9,1)
+    end
+	if (pos_Zero +60) >1 then 
+		mc.setdo(9,0)
+    end
+end
 
 
