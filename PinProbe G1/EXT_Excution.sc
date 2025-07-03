@@ -65,7 +65,6 @@ function ext_StartTest(times)
 	btnStartTest1 = mc.getdi(9)
 	delay(times)
 	btnStartTest2 = mc.getdi(9)
-	
 	btnStartTestNum = btnStartTest1 + btnStartTest2
 	if btnStartTestNum == 0 then 
 		if gModeState == 0 then  // ³£¹æ²âÊÔ×´Ì¬ÅÐ¶¨
