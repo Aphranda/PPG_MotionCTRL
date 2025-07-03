@@ -6,20 +6,20 @@
     <PrjLastModTime>0</PrjLastModTime>
     <PrjDesc>用于PinProbe G1的自动化控制</PrjDesc>
     <PrjAuthor>DL</PrjAuthor>
-    <PrjPath>C:/Users/Lenovo/Desktop/20250603NOAIRCup/20250603NOAIRCup</PrjPath>
-    <PrjStorePath>C:/Users/Lenovo/Desktop/20250603NOAIRCup/20250603NOAIRCup//PinProbe G1//</PrjStorePath>
-    <SOR1>ETH_Queue.sc</SOR1>
-    <SOR2>EXT_Excution.sc</SOR2>
-    <SOR3>BTN_Excution.sc</SOR3>
-    <SOR4>State_Machine.sc</SOR4>
-    <SOR5>main.sc</SOR5>
-    <SOR6>RF_Excution.sc</SOR6>
-    <SOR7>SCPI_Excution.sc</SOR7>
-    <SOR8>CYL_Excution.sc</SOR8>
-    <SOR9>LED_Excution.sc</SOR9>
-    <SOR10>AUX_FUNC.sc</SOR10>
-    <SOR11>Motion_Excution.sc</SOR11>
-    <SOR12>ETH_Excution.sc</SOR12>
+    <PrjPath>C:/Users/Aphranda/Desktop/20250703NOAIRCup</PrjPath>
+    <PrjStorePath>C:/Users/Aphranda/Desktop/20250703NOAIRCup//PinProbe G1//</PrjStorePath>
+    <SOR1>ETH_Excution.sc</SOR1>
+    <SOR2>Motion_Excution.sc</SOR2>
+    <SOR3>AUX_FUNC.sc</SOR3>
+    <SOR4>LED_Excution.sc</SOR4>
+    <SOR5>CYL_Excution.sc</SOR5>
+    <SOR6>SCPI_Excution.sc</SOR6>
+    <SOR7>RF_Excution.sc</SOR7>
+    <SOR8>main.sc</SOR8>
+    <SOR9>State_Machine.sc</SOR9>
+    <SOR10>BTN_Excution.sc</SOR10>
+    <SOR11>EXT_Excution.sc</SOR11>
+    <SOR12>ETH_Queue.sc</SOR12>
     <TASK1>
         <TASK_Index>0</TASK_Index>
         <TASK_Prio>3</TASK_Prio>
@@ -132,62 +132,6 @@
         <TASK_Prm>43</TASK_Prm>
         <TASK_Prm2>-256</TASK_Prm2>
     </TASK16>
-    <TASK17>
-        <TASK_Index>16</TASK_Index>
-        <TASK_Prio>12544</TASK_Prio>
-        <TASK_Type>4208</TASK_Type>
-        <TASK_Prm>13360</TASK_Prm>
-        <TASK_Prm2>14132</TASK_Prm2>
-    </TASK17>
-    <TASK18>
-        <TASK_Index>17</TASK_Index>
-        <TASK_Prio>2304</TASK_Prio>
-        <TASK_Type>15360</TASK_Type>
-        <TASK_Prm>1024</TASK_Prm>
-        <TASK_Prm2>-4352</TASK_Prm2>
-    </TASK18>
-    <TASK19>
-        <TASK_Index>18</TASK_Index>
-        <TASK_Prio>-6054</TASK_Prio>
-        <TASK_Type>-14146</TASK_Type>
-        <TASK_Prm>-13172</TASK_Prm>
-        <TASK_Prm2>3930</TASK_Prm2>
-    </TASK19>
-    <TASK20>
-        <TASK_Index>19</TASK_Index>
-        <TASK_Prio>0</TASK_Prio>
-        <TASK_Type>11803</TASK_Type>
-        <TASK_Prm>26880</TASK_Prm>
-        <TASK_Prm2>231</TASK_Prm2>
-    </TASK20>
-    <TASK21>
-        <TASK_Index>20</TASK_Index>
-        <TASK_Prio>2304</TASK_Prio>
-        <TASK_Type>0</TASK_Type>
-        <TASK_Prm>0</TASK_Prm>
-        <TASK_Prm2>0</TASK_Prm2>
-    </TASK21>
-    <TASK22>
-        <TASK_Index>21</TASK_Index>
-        <TASK_Prio>0</TASK_Prio>
-        <TASK_Type>0</TASK_Type>
-        <TASK_Prm>0</TASK_Prm>
-        <TASK_Prm2>0</TASK_Prm2>
-    </TASK22>
-    <TASK23>
-        <TASK_Index>22</TASK_Index>
-        <TASK_Prio>4096</TASK_Prio>
-        <TASK_Type>0</TASK_Type>
-        <TASK_Prm>-18542</TASK_Prm>
-        <TASK_Prm2>12544</TASK_Prm2>
-    </TASK23>
-    <TASK24>
-        <TASK_Index>23</TASK_Index>
-        <TASK_Prio>13312</TASK_Prio>
-        <TASK_Type>12288</TASK_Type>
-        <TASK_Prm>13312</TASK_Prm>
-        <TASK_Prm2>14080</TASK_Prm2>
-    </TASK24>
     <EXTASK1>
         <EXTASK_Index>0</EXTASK_Index>
         <EXTASK_Prio>1000</EXTASK_Prio>
@@ -300,60 +244,4 @@
         <EXTASK_Prm>0</EXTASK_Prm>
         <EXTASK_Prm2>0</EXTASK_Prm2>
     </EXTASK16>
-    <EXTASK17>
-        <EXTASK_Index>16</EXTASK_Index>
-        <EXTASK_Prio>1000</EXTASK_Prio>
-        <EXTASK_Type>0</EXTASK_Type>
-        <EXTASK_Prm>0</EXTASK_Prm>
-        <EXTASK_Prm2>0</EXTASK_Prm2>
-    </EXTASK17>
-    <EXTASK18>
-        <EXTASK_Index>17</EXTASK_Index>
-        <EXTASK_Prio>1000</EXTASK_Prio>
-        <EXTASK_Type>0</EXTASK_Type>
-        <EXTASK_Prm>0</EXTASK_Prm>
-        <EXTASK_Prm2>0</EXTASK_Prm2>
-    </EXTASK18>
-    <EXTASK19>
-        <EXTASK_Index>18</EXTASK_Index>
-        <EXTASK_Prio>1000</EXTASK_Prio>
-        <EXTASK_Type>0</EXTASK_Type>
-        <EXTASK_Prm>0</EXTASK_Prm>
-        <EXTASK_Prm2>0</EXTASK_Prm2>
-    </EXTASK19>
-    <EXTASK20>
-        <EXTASK_Index>19</EXTASK_Index>
-        <EXTASK_Prio>1000</EXTASK_Prio>
-        <EXTASK_Type>0</EXTASK_Type>
-        <EXTASK_Prm>0</EXTASK_Prm>
-        <EXTASK_Prm2>0</EXTASK_Prm2>
-    </EXTASK20>
-    <EXTASK21>
-        <EXTASK_Index>20</EXTASK_Index>
-        <EXTASK_Prio>1000</EXTASK_Prio>
-        <EXTASK_Type>0</EXTASK_Type>
-        <EXTASK_Prm>0</EXTASK_Prm>
-        <EXTASK_Prm2>0</EXTASK_Prm2>
-    </EXTASK21>
-    <EXTASK22>
-        <EXTASK_Index>21</EXTASK_Index>
-        <EXTASK_Prio>1000</EXTASK_Prio>
-        <EXTASK_Type>0</EXTASK_Type>
-        <EXTASK_Prm>0</EXTASK_Prm>
-        <EXTASK_Prm2>0</EXTASK_Prm2>
-    </EXTASK22>
-    <EXTASK23>
-        <EXTASK_Index>22</EXTASK_Index>
-        <EXTASK_Prio>1000</EXTASK_Prio>
-        <EXTASK_Type>0</EXTASK_Type>
-        <EXTASK_Prm>0</EXTASK_Prm>
-        <EXTASK_Prm2>0</EXTASK_Prm2>
-    </EXTASK23>
-    <EXTASK24>
-        <EXTASK_Index>23</EXTASK_Index>
-        <EXTASK_Prio>1000</EXTASK_Prio>
-        <EXTASK_Type>0</EXTASK_Type>
-        <EXTASK_Prm>0</EXTASK_Prm>
-        <EXTASK_Prm2>0</EXTASK_Prm2>
-    </EXTASK24>
 </PrjInfo>
