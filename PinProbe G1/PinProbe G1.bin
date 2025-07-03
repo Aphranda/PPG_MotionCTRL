@@ -1,0 +1,1687 @@
+///project infos
+//100
+//PinProbe G1
+//0
+//0
+//用于PinProbe G1的自动化控制
+//DL
+///mc
+function mc_config()
+gccfg.cfgstopaction(0,0,0,0)
+gccfg.cfgsignal(1,1,1,0,0,0)
+gccfg.cfgmech(1,20000.000,36000.0,95.000,200.000)
+gccfg.cfgsafe(1,2000.00,2000.00,2000.00,32767.00,0.00)
+gccfg.cfghome(1,0,3,0,0,0.000,0.000)
+gccfg.cfghomemv(1,4,20.00,5.00,5.00,360000.0)
+gccfg.cfgsignal(2,0,0,0,0,0)
+gccfg.cfgmech(2,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(2,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(2,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(2,0,2000.00,1000.00,2000.00,0.0)
+gccfg.cfgsignal(3,0,0,0,0,0)
+gccfg.cfgmech(3,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(3,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(3,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(3,0,2000.00,1000.00,2000.00,0.0)
+gccfg.cfgsignal(4,0,0,0,0,0)
+gccfg.cfgmech(4,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(4,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(4,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(4,0,2000.00,1000.00,2000.00,0.0)
+gccfg.cfgsignal(5,0,0,0,0,0)
+gccfg.cfgmech(5,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(5,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(5,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(5,0,2000.00,1000.00,2000.00,0.0)
+gccfg.cfgsignal(6,0,0,0,0,0)
+gccfg.cfgmech(6,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(6,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(6,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(6,0,2000.00,1000.00,2000.00,0.0)
+gccfg.cfgsignal(7,0,0,0,0,0)
+gccfg.cfgmech(7,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(7,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(7,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(7,0,2000.00,1000.00,2000.00,0.0)
+gccfg.cfgsignal(8,0,0,0,0,0)
+gccfg.cfgmech(8,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(8,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(8,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(8,0,2000.00,1000.00,2000.00,0.0)
+gccfg.cfgsignal(9,0,0,0,0,0)
+gccfg.cfgmech(9,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(9,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(9,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(9,0,2000.00,1000.00,2000.00,0.0)
+gccfg.cfgsignal(10,0,0,0,0,0)
+gccfg.cfgmech(10,10000.000,10000.0,0.000,0.000)
+gccfg.cfgsafe(10,10000.00,50000.00,50000.00,32767.00,0.00)
+gccfg.cfghome(10,0,6,0,0,0.000,0.000)
+gccfg.cfghomemv(10,0,2000.00,1000.00,2000.00,0.0)
+end
+///task
+function task_config()
+gccfg.setprop(1,0,3,0,0)
+gccfg.setprop(2,0,3,0,0)
+gccfg.setprop(3,0,3,0,0)
+gccfg.setprop(4,1,3,0,0)
+gccfg.setprop(17,4208,12544,13360,14132)
+gccfg.setprop(18,15360,2304,1024,-4352)
+gccfg.setprop(21,0,2304,0,0)
+gccfg.setprop(23,0,4096,-18542,12544)
+gccfg.setprop(24,12288,13312,13312,14080)
+gccfg.setprop(25,0,1000,0,0)
+end
+///lib
+function delay(n)
+ local df = 1
+ local s=mc.getclock() + n
+ while df > 0 do
+ 			df = s-mc.getclock()
+  end
+end
+
+///sor
+//ETH_Queue.sc
+
+
+
+//EXT_Excution.sc
+function ext_excution(param1)
+
+end
+
+
+dut_result = 0
+
+
+function ext_startok(times)
+mc.setdo(1,1)
+delay(times)
+mc.setdo(1,0)
+print("======START OK======")
+end
+
+
+function ext_resetok(times)
+mc.setdo(2,1)
+delay(times)
+mc.setdo(2,0)
+print("======RESET OK======")
+end
+
+
+function ext_testerror(times)
+mc.setdo(3,1)
+delay(times)
+mc.setdo(3,0)
+print("======TEST ERROR======")
+end
+
+
+function ext_duttestok(times)
+mc.setdo(4,1)
+delay(times)
+mc.setdo(4,0)
+print("======DUT OK======")
+end
+
+
+function ext_duttestng(times)
+mc.setdo(5,1)
+delay(times)
+mc.setdo(5,0)
+print("======DUT NG======")
+end
+
+
+function ext_duttestresult(times)
+if dut_result == 0 then
+ext_duttestng(times)
+end
+
+if dut_result == 1 then
+ext_duttestok(times)
+end
+
+if dut_result == 2 then
+ext_testerror(times)
+end
+end
+
+
+function ext_starttest(times)
+btnstarttest1 = mc.getdi(9)
+delay(times)
+btnstarttest2 = mc.getdi(9)
+
+btnstarttestnum = btnstarttest1 + btnstarttest2
+if btnstarttestnum == 0 then
+gteststep = 2 
+print("==============EXT START===============")
+end
+end
+
+
+function ext_startreset(times)
+btnstartreset1 = mc.getdi(10)
+delay(times)
+btnstartreset2 = mc.getdi(10)
+
+btnstartresetnum = btnstartreset1 + btnstartreset2
+
+if btnstartresetnum == 0 then
+motion_home()
+print("==============EXT HOME===============")
+end
+end
+
+
+function ext_stoptest(times)
+btnstoptest1 = mc.getdi(11)
+delay(times)
+btnstoptest2 = mc.getdi(11)
+
+btnstoptestnum = btnstoptest1 + btnstoptest2
+if btnstoptestnum == 0 then
+gteststep = 3 
+print("==============EXT STOP===============")
+end
+end
+
+
+function ext_modeselect(times)
+mode1 = mc.getdi(12)
+delay(times)
+mode2 = mc.getdi(13)
+
+
+if mode1 == 0 and mode2 == 1 then
+gmodestate = 1
+end
+
+
+if mode1 == 1 and mode2 == 0 then
+gmodestate = 2
+end
+
+
+if mode1 == 1 and mode2 == 1 then
+gmodestate = 0
+end
+end
+
+
+//BTN_Excution.sc
+
+
+function btn_excution(param1)
+if btn_test == 1 then
+print(" =CYL= ")
+cyl1_encode(1)
+delay(1000)
+cyl1_encode(0)
+delay(1000)
+cyl1_encode(1)
+delay(1000)
+cyl1_encode(0)
+delay(1000)
+cyl2_encode(1)
+delay(1000)
+cyl2_encode(0)
+end
+end
+
+
+
+function allbtnispress(times)
+btnlstate = mc.getdi(4)	
+btnrstate = mc.getdi(5)
+count = 0
+countmax = times*10
+btn_num = btnlstate + btnrstate
+if btn_num == 0  then
+while count < countmax and count > - countmax do
+btnlstate = mc.getdi(4)
+btnrstate = mc.getdi(5)
+btn_num = btnlstate + btnrstate
+if btnlstate + btnrstate == 0 then
+count = count + 1
+delay(100)
+if count == countmax then
+print("Pressed")
+count = 0
+return "Pressed"
+end
+else
+count = count -1
+delay(100)
+if count == - countmax then
+print("Released")
+count = 0
+return "Released"
+end
+end
+print("COUNTA:",count)
+end
+end
+end
+
+
+function anybtnispress(times)
+btnlstate = mc.getdi(4)
+btnrstate = mc.getdi(5)
+count = 0
+countmax = times*10
+btn_num = btnlstate + btnrstate
+if btn_num == 1 then
+while count < countmax and count > - countmax do
+btnlstate = mc.getdi(4)
+btnrstate = mc.getdi(5)
+btn_num = btnlstate + btnrstate
+if btnlstate == 0 or btnrstate == 0 then
+count = count + 1
+delay(100)
+if count == countmax then
+print("Pressed")
+count = 0
+return "Pressed"
+end
+else
+count = count -1
+delay(100)
+if count == - countmax then
+print("Released")
+count =  0
+return "Released"
+end
+end
+print("COUNTS:",count, btnlstate, btnrstate)
+end
+end
+end
+
+
+function btn_emerged()
+btn_stop = mc.getdi(1)
+if btn_stop == 1 then
+eth_write(0,"EMERGENCY")
+led_redflash()
+gsmstep = 5
+gteststep = 0
+gcalstep = 0
+mc.runstop()
+mc.movstop(axis)
+end
+end
+
+
+function btn_laser()
+btn_laser = mc.getdi(6)
+if btn_laser == 1 then
+gsmstep = 5
+gteststep = 0
+rtn = mc.axissts(axis,0)
+if rtn ~=0 then
+mc.movstop(axis)
+end
+end
+end
+
+
+//State_Machine.sc
+gsmsinitflag = 1		
+gsmstep = 0			
+gsmoldstep = 0
+gsmststate = {"IDLE","READY","RUNNING","TESTING","LOCK","EMERGENCY"}
+
+gteststep = 0
+
+gteststate = {"TESTING", "TESTED"}
+gmodestate = 0
+gmodeoldstate = 0
+gmodestatelist = {"AT", "CAL", "PI"}
+
+function sminit() 	
+
+
+
+rtn1 = scpi_cyl_excution("CONF:CYL1 UP")
+if rtn1 == "UP" then
+
+motion_home()
+end
+
+
+
+if rtn2 == "OPEN" then
+gsmstep = 0
+
+scpi_led_excution("CONF:LED OFF")
+eth_write(0,gsmststate[1])
+end
+gsmsinitflag = 1
+end
+
+function smmain() 
+
+
+gsmoldstep = gsmstep
+
+if gsmstep == 0 then smstep0()
+elseif gsmstep == 1 then smstep1()
+elseif gsmstep == 2 then smstep2()
+elseif gsmstep == 3 then smstep3()
+elseif gsmstep == 4 then smstep4()
+end
+
+
+if gsmoldstep ~= gsmstep then
+showstate()
+end
+end
+
+function smstep0() 											
+delay(10)
+rtn = allbtnispress(0.2) 										
+if rtn == "Pressed" or gteststep == 2 then
+gsmstep = 1												
+scpi_led_excution("CONF:LED YELLOW")		
+end
+
+
+
+end
+
+function smstep1()		
+delay(10)
+rtn = allbtnispress(0.2) 											
+if rtn == "Pressed" or gteststep == 2 then
+gsmstep = 2
+
+ext_startok(500)
+end
+
+end
+
+function smstep2() 	
+
+rtn1 = scpi_servo_excution("CONF:SERVO CLOSE")
+if rtn1 == "CLOSE" then
+
+rtn2 = scpi_cyl_excution("CONF:CYL1 DOWN")
+
+if rtn2 == "CYL ERROR" then
+print("========CYL ERROR============")
+errorexit()
+end
+end
+
+if rtn1 == "CLOSE" and rtn2 == "DOWN" then
+gsmstep = 3		
+gteststep = 0
+end
+
+end
+
+function smstep3() 	
+delay(10)
+scpi_led_excution("CONF:LED GREEN")
+gsmstep = 4	
+end
+
+function smstep4() 	
+rtn = allbtnispress(0.3)  
+if rtn == "Pressed" or gteststep == 3 then
+rtn1 = scpi_cyl_excution("CONF:CYL1 UP") 		
+if rtn1 == "UP" then
+rtn2 = scpi_servo_excution("CONF:SERVO OPEN") 
+if rtn2 == "OPEN" then
+gsmstep = 0
+gteststep = 0
+scpi_led_excution("CONF:LED OFF")
+eth_write(0,"TESTED")		
+
+ext_duttestresult(500)
+end
+end
+end
+
+end
+
+
+function errorexit()
+rtn1 = scpi_cyl_excution("CONF:CYL1 UP") 		
+if rtn1 == "UP" then
+rtn2 = scpi_servo_excution("CONF:SERVO OPEN") 
+if rtn2 == "OPEN" then
+gsmstep = 0
+gteststep = 0
+scpi_led_excution("CONF:LED OFF")
+eth_write(0,"ERROREXIT")		
+
+dut_result = 2
+ext_duttestresult(500)
+end
+end
+end
+
+function showstate()
+if gsmstep == 0 then
+eth_write(0,gsmststate[1])
+print("STATE:",gsmststate[1])
+elseif gsmstep == 1 then
+eth_write(0,gsmststate[2])
+print("STATE:",gsmststate[2])
+elseif gsmstep == 2 then
+eth_write(0,gsmststate[3])
+print("STATE:",gsmststate[3])
+elseif gsmstep == 3 then
+eth_write(0,gsmststate[4])
+print("STATE:",gsmststate[4])
+elseif gsmstep == 5 then
+eth_write(0,gsmststate[6])
+print("STATE:",gsmststate[6])
+end
+end
+
+//main.sc
+
+ginitflag = 0
+gnetinitedflag = 0
+manualmode = 1
+
+
+lock_flag= 0
+
+axis = 1
+axis_guide = 20 
+axis_equivalent = 36000 
+
+position_mode1 = 198.25 
+
+
+axis_aim_pos = 198.25
+
+axis_zero_pos = -60
+
+
+axis_aim_vel = 200
+axis_aim_acc = 400
+axis_aim_dec = 400
+
+
+scpi_test = 0
+led_test = 0
+cyl_test = 0
+rf_test = 0
+motion_test = 0
+
+
+function task1_main()
+print(" =TASK 2 START= ")
+local netidx = 0	
+local gprototype = 1			
+
+eth_connect(netidx, gprototype)
+print("=========================ginitFlag",ginitflag)
+
+while ginitflag > 0 do
+if net.netsts(netidx) > 0 then
+delay(1)
+
+read_data = eth_read(netidx)
+if rtnisexist(read_data) then
+
+delay(1)
+scpi_recv = scpi_push(read_data)
+end
+
+
+if rtnisexist(scpi_recv) then
+delay(1)
+eth_write(netidx,scpi_recv)
+end
+else
+eth_disconnect(netidx, gprototype)
+end
+
+end
+end
+
+
+
+function task2_main()
+print(" =TASK 2 START= ")
+while 1 > 0 do
+if gsmsinitflag == 0 then
+sminit()
+end
+delay(1)
+
+btn_emerged()
+
+ext_starttest(50)   	
+ext_startreset(50) 	
+ext_stoptest(50)	
+
+
+gmodeoldstate = gmodestate
+
+ext_modeselect(100)
+
+if gmodeoldstate ~= gmodestate then
+eth_write(0,gmodestatelist[gmodestate+1])
+end
+end
+end
+
+
+function task3_main()
+while 1 > 0 do
+if gsmsinitflag > 0 then
+if manualmode == 0 then 
+smmain()
+else
+delay(1)	
+end
+else
+delay(1)
+end
+
+btn_emerged()
+end
+end
+
+
+function task4_main()
+print(" =TASK 4 INIT= ")
+delay(1000)
+rtn = mc.axisop(axis,3) 
+delay(1000)
+
+servo_on = mc.axissts(axis,4)
+if servo_on ~= 1 then
+mc.axisop(axis,2)
+end
+gsmsinitflag = 0
+manualmode = 0
+end
+
+
+
+
+
+
+//RF_Excution.sc
+
+function jog_excution(param1)
+if rf_test == 1 then
+print(" =RF= ")
+delay(3000)
+switch1_encode(1)
+switch1_encode(2)
+switch1_encode(4)
+end
+end
+
+
+function switch1_encode(index)
+if index == 1 then
+mc.setdo(1,0)
+mc.setdo(2,0)
+mc.setdo(3,0)
+elseif index == 2 then
+mc.setdo(1,1)
+mc.setdo(2,0)
+mc.setdo(3,0)
+elseif index == 3 then
+mc.setdo(1,0)
+mc.setdo(2,1)
+mc.setdo(3,0)
+elseif index == 4 then
+mc.setdo(1,1)
+mc.setdo(2,1)
+mc.setdo(3,0)
+elseif index == 5 then
+mc.setdo(1,0)
+mc.setdo(2,0)
+mc.setdo(3,1)
+elseif index == 6 then
+mc.setdo(1,1)
+mc.setdo(2,0)
+mc.setdo(3,1)
+elseif index == 7 then
+mc.setdo(1,0)
+mc.setdo(2,1)
+mc.setdo(3,1)
+elseif index == 8 then
+mc.setdo(1,1)
+mc.setdo(2,1)
+mc.setdo(3,1)
+end
+end
+
+
+function switch2_encode(index)
+if index == 1 then
+mc.setdo(4,0)
+mc.setdo(5,0)
+mc.setdo(6,0)
+elseif index == 2 then
+mc.setdo(4,1)
+mc.setdo(5,0)
+mc.setdo(6,0)
+elseif index == 3 then
+mc.setdo(4,0)
+mc.setdo(5,1)
+mc.setdo(6,0)
+elseif index == 4 then
+mc.setdo(4,1)
+mc.setdo(5,1)
+mc.setdo(6,0)
+elseif index == 5 then
+mc.setdo(4,0)
+mc.setdo(5,0)
+mc.setdo(6,1)
+elseif index == 6 then
+mc.setdo(4,1)
+mc.setdo(5,0)
+mc.setdo(6,1)
+elseif index == 7 then
+mc.setdo(4,0)
+mc.setdo(5,1)
+mc.setdo(6,1)
+elseif index == 8 then
+mc.setdo(4,1)
+mc.setdo(5,1)
+mc.setdo(6,1)
+end
+end
+
+
+function switch1_decode(param1)
+one = mc.getdo(1)
+two = mc.getdo(2)
+three = mc.getdo(3)
+
+index = one + two*2^1 +three * 2^2 + 1
+return index
+end
+
+
+function switch2_decode(param1)
+one = mc.getdo(4)
+two = mc.getdo(5)
+three = mc.getdo(6)
+
+index = one + two*2^1 +three * 2^2 + 1
+return index
+end
+
+
+//SCPI_Excution.sc
+
+function scpi_excution(param1)
+if scpi_test == 1 then
+print(" =SCPI= ")
+/*
+rtn1 = scpi_push("CONFigure:LOCK ON")
+
+rtn3 = scpi_push("READ:LED STATe?")
+rtn4 = scpi_push("CONFigure:SWITCH2 RF2")
+rtn5 = scpi_push("READ:SWITCH1:STATE?")
+*/
+scpi_push("CONFigure:SERVO CLOSE")
+rtn = scpi_push("READ:SERVO:STATE?")
+print(rtn)
+scpi_push("CONFigure:SERVO OPEN")
+rtn = scpi_push("READ:SERVO:STATE?")
+print(rtn)
+end
+end
+
+
+function scpi_push(str_scpi)
+
+idxc = string.find(str_scpi,"CONF")
+idxr = string.find(str_scpi,"READ")
+idxt = string.find(str_scpi,"TRIG")
+idxbase = string.find(str_scpi,"*")
+
+if rtnisexist(idxc) then
+return conf_push(str_scpi)
+end
+
+
+if rtnisexist(idxr) then
+return read_push(str_scpi)
+end
+
+
+
+if rtnisexist(idxt) then
+return trig_push(str_scpi)
+end
+
+
+if rtnisexist(idxbase) then
+return base_push(str_scpi)
+end
+
+end
+
+function base_push(str_scpi)
+idxidn = string.find(str_scpi,"*IDN?")
+if rtnisexist(idxidn) then
+return "GTS PINPROBEG1 20240328 V0.0.1"
+end
+end
+
+
+function conf_push(str_scpi)
+idxlock = string.find(str_scpi,"LOCK")
+idxled = string.find(str_scpi,"LED")
+idxsw = string.find(str_scpi,"SWITCH")
+idxcyl = string.find(str_scpi,"CYL")
+idxservo = string.find(str_scpi,"SERV")
+idxeth = string.find(str_scpi,"ETH")
+idxtest = string.find(str_scpi,"TEST")
+idxmode = string.find(str_scpi,"MODE")
+
+
+
+
+if rtnisexist(idxlock) then
+rtn = scpi_lock_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxled) then
+rtn = scpi_led_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxsw) then
+rtn = scpi_sw_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxcyl) then
+rtn = scpi_cyl_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxservo) then
+rtn = scpi_servo_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxeth) then
+rtn = scpi_eth_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxtest) then
+rtn = scpi_test_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxmode) then
+rtn = scpi_mode_excution(str_scpi)
+return rtn
+end
+
+
+return "SCPI ERROR"
+end
+
+function read_push(str_scpi)
+idxlock = string.find(str_scpi,"LOCK")
+idxled = string.find(str_scpi,"LED")
+idxsw = string.find(str_scpi,"SWITCH")
+idxcyl = string.find(str_scpi,"CYL")
+idxservo = string.find(str_scpi,"SERV")
+idsys = string.find(str_scpi,"SYSTEM")
+idtrig = string.find(str_scpi,"TRIG")
+idxmode = string.find(str_scpi,"MODE")
+
+
+
+
+if rtnisexist(idxlock) then
+rtn = scpi_lock_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxled) then
+rtn = scpi_led_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxsw) then
+rtn = scpi_sw_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxcyl) then
+rtn = scpi_cyl_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxservo) then
+rtn = scpi_servo_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idsys) then
+rtn = scpi_sys_excution(str_scpi)
+return rtn
+end
+
+
+if rtnisexist(idxmode) then
+rtn = scpi_mode_excution(str_scpi)
+return rtn
+end
+
+end
+
+function trig_push(str_scpi)
+print("TRIG PUSH")
+return 1
+end
+
+function scpi_lock_excution(str_scpi)
+
+rtn_on = string.find(str_scpi,"LOCKED")
+rtn_off = string.find(str_scpi,"UNLOCK")
+rtn_state = string.find(str_scpi,"STAT")
+
+
+if rtnisexist(rtn_on) then
+lock_flag = 1
+manualmode = 1
+return "LOCKED"
+end
+
+
+if rtnisexist(rtn_off) then
+lock_flag = 0
+gsmsinitflag = 0
+manualmode = 0
+mc.setdo(2,0)
+
+rtn_off = 0
+motion_home()
+
+
+return "UNLOCK"
+end
+
+
+if rtnisexist(rtn_state) then
+if lock_flag ==1 then
+return "LOCKED"
+end
+if lock_flag ==1 then
+return "UNLOCK"
+end
+end
+return "SCPI ERROR"
+end
+
+
+function scpi_led_excution(str_scpi)
+
+
+rtn_red = string.find(str_scpi,"RED")
+rtn_green = string.find(str_scpi,"GREEN")
+rtn_yellow = string.find(str_scpi,"YELLOW")
+rtn_off = string.find(str_scpi,"OFF")
+rtn_state = string.find(str_scpi,"STAT")
+
+
+if rtnisexist(rtn_off) then
+rtn = led_encode(0)
+return rtn
+end
+
+if rtnisexist(rtn_red) then
+rtn = led_encode(1)
+return rtn
+end
+
+if rtnisexist(rtn_green) then
+rtn = led_encode(2)
+return rtn
+end
+
+if rtnisexist(rtn_yellow) then
+rtn = led_encode(3)
+return rtn
+end
+
+
+if rtnisexist(rtn_state) then
+rtn = led_decode()
+return rtn;
+end
+
+return "SCPI ERROR"
+end
+
+
+function scpi_sw_excution(str_scpi)
+if manualmode == 0 then
+rtn_sw1 = string.find(str_scpi,"SWITCH1")
+rtn_sw2 = string.find(str_scpi,"SWITCH2")
+rtn_state = string.find(str_scpi,"STATE")
+rtn_rf1 = string.find(str_scpi,"RF1")
+rtn_rf2 = string.find(str_scpi,"RF2")
+rtn_rf3 = string.find(str_scpi,"RF3")
+rtn_rf4 = string.find(str_scpi,"RF4")
+rtn_rf5 = string.find(str_scpi,"RF5")
+rtn_rf6 = string.find(str_scpi,"RF6")
+rtn_rf7 = string.find(str_scpi,"RF7")
+rtn_rf8 = string.find(str_scpi,"RF8")
+elseif manualmode == 1 then
+return "UNLOCK"
+end
+
+
+if  rtnisexist(rtn_sw1) then
+
+if rtnisexist(rtn_rf1) then
+switch1_encode(1)
+return "RF1"
+elseif rtnisexist(rtn_rf2) then
+switch1_encode(2)
+return "RF2"
+elseif rtnisexist(rtn_rf3) then
+switch1_encode(3)
+return "RF3"
+elseif rtnisexist(rtn_rf4) then
+switch1_encode(4)
+return "RF4"
+elseif rtnisexist(rtn_rf5) then
+switch1_encode(5)
+return "RF5"
+elseif rtnisexist(rtn_rf6) then
+switch1_encode(6)
+return "RF6"
+elseif rtnisexist(rtn_rf7) then
+switch1_encode(7)
+return "RF7"
+elseif rtnisexist(rtn_rf8) then
+switch1_encode(8)
+return "RF8"
+end
+
+if rtnisexist(rtn_state) then
+rtn = switch1_decode()
+return string.format("RF%X",rtn)
+end
+end
+
+if  rtnisexist(rtn_sw2) then
+if rtnisexist(rtn_rf1) then
+switch2_encode(1)
+return "RF1"
+elseif rtnisexist(rtn_rf2) then
+switch2_encode(2)
+return "RF2"
+elseif rtnisexist(rtn_rf3) then
+switch2_encode(3)
+return "RF3"
+elseif rtnisexist(rtn_rf4) then
+switch2_encode(4)
+return "RF4"
+elseif rtnisexist(rtn_rf5) then
+switch2_encode(5)
+return "RF5"
+elseif rtnisexist(rtn_rf6) then
+switch2_encode(6)
+return "RF6"
+elseif rtnisexist(rtn_rf7) then
+switch2_encode(7)
+return "RF7"
+elseif rtnisexist(rtn_rf8) then
+switch2_encode(8)
+return "RF8"
+end
+
+
+if rtnisexist(rtn_state) then
+rtn = switch2_decode()
+return string.format("RF%X",rtn)
+end
+end
+return "SCPI ERROR"
+end
+
+
+
+function scpi_cyl_excution(str_scpi)
+rtn_up = string.find(str_scpi,"UP")
+rtn_down = string.find(str_scpi,"DOWN")
+rtn_state = string.find(str_scpi,"STATE")
+
+
+if rtnisexist(rtn_up) then
+rtn = cyl1_encode(2)
+count = 0
+countmax = 100
+print(count)
+while count < countmax do
+state = cyl1_decode()
+if state == "UP" then
+print("UP")
+return "UP"
+end
+count = count + 1
+print("CYL_UP:", count)
+delay(100)
+end
+return "CYL ERROR"
+end
+
+
+if rtnisexist(rtn_down) then
+rtn = cyl1_encode(1)
+count = 0
+countmax = 100
+while count < countmax do
+state = cyl1_decode()
+if state == "DOWN" then
+print("DOWN")
+return "DOWN"
+end
+count = count + 1
+print("CYL_DOWN:", count)
+delay(100)
+end
+return "CYL ERROR"
+end
+
+
+if rtnisexist(rtn_state) then
+rtn = cyl1_decode
+return rtn
+end
+return "SCPI ERROR"
+end
+
+
+function scpi_servo_excution(str_scpi)
+
+rtn_close = string.find(str_scpi, "CLOSE")
+rtn_open = string.find(str_scpi, "OPEN")
+rtn_state = string.find(str_scpi, "STATE")
+
+stop_sig = mc.getdi(14)
+cyl_state = cyl1_decode()
+if cyl_state == "DOWN" then
+gteststep = 0
+gsmstep = 0
+return "CYL ERROR"
+end
+
+
+if rtnisexist(rtn_close) then
+if  stop_sig == 0  then  
+gteststep = 0
+gsmstep = 0
+return "CYL ERROR"
+end
+rtn = motion_close()
+return "CLOSE"
+end
+
+
+if rtnisexist(rtn_open) then
+if  stop_sig == 0  then  
+gteststep = 0
+gsmstep = 4
+return "CYL ERROR"
+end
+rtn = motion_open()
+return "OPEN"
+end
+
+
+if rtnisexist(rtn_state) then
+rtn = motion_decode()
+return rtn
+end
+return "SCPI ERROR"
+end
+
+
+function scpi_test_excution(str_scpi)
+rtn_check = string.find(str_scpi, "CHECK")
+rtn_start = string.find(str_scpi, "START")
+rtn_stop = string.find(str_scpi, "STOP")
+rtn_dutok = string.find(str_scpi, "OK")
+rtn_dutng = string.find(str_scpi, "NG")
+rtn_duterror = string.find(str_scpi, "ERROR")
+
+if rtnisexist(rtn_check) then
+gteststep = 1		
+return "CHECKED"
+end
+
+if rtnisexist(rtn_start) then
+gteststep = 2		
+cyl_state = cyl1_decode()
+if cyl_state == "DOWN" then
+return "TESTING"
+end
+end
+if rtnisexist(rtn_stop) then
+gteststep = 3		
+motion_state = motion_decode()
+if motion_state == "OPEN OK" then
+return "TESTED"
+end
+end
+
+
+if rtnisexist(rtn_dutok) then
+dut_result = 1  
+return "DUT OK"
+end
+
+if rtnisexist(rtn_dutng) then
+dut_result = 0  
+return "DUT NG"
+end
+
+if rtnisexist(rtn_duterror) then
+dut_result = 2 
+return "DUT ERROR"
+end
+
+print("gTestStep",gteststep)
+end
+
+function scpi_mode_excution(str_scpi)
+rtn_at = string.find(str_scpi, " AT")
+rtn_cal = string.find(str_scpi, " CAL")
+rtn_pi = string.find(str_scpi, " PI")
+rtn_pos = string.find(str_scpi, " POS")
+rtn_state = string.find(str_scpi, "STATE")
+
+
+if rtnisexist(rtn_at) then
+return "AT"
+end
+
+
+if rtnisexist(rtn_cal) then
+return "CAL"
+end
+
+
+if rtnisexist(rtn_pi) then
+return "PI"
+end
+
+
+if rtnisexist(rtn_pos) then
+rtn_pos = string.find(str_scpi,"POS")
+if rtnisexist(rtn_pos) then
+end
+end
+
+
+print("gModeState",gmodestate)
+
+if rtnisexist(rtn_state) then
+if  gmodestate == 0 then
+return "AT"
+end
+
+if  gmodestate == 1 then
+return "CAL"
+end
+
+if  gmodestate == 2 then
+return "PI"
+end
+end
+
+end
+
+
+function scpi_sys_excution(str_scpi)
+print("SYSTEM",gsmststate[gsmstep+1],gsmstep)
+
+if gsmstep == 0 then
+return gsmststate[gsmstep+1]
+end
+
+if gsmstep == 1 then
+return gsmststate[gsmstep+1]
+end
+
+if gsmstep == 2 then
+return gsmststate[gsmstep+1]
+end
+
+if gsmstep == 3 then
+return gsmststate[gsmstep+1]
+end
+if gsmstep == 4 then
+return gsmststate[gsmstep]
+end
+
+end
+
+
+function scpi_eth_excution(str_scpi)
+if manualmode == 0 then
+rtn_ip = string.find(str_scpi, "IP")
+elseif manualmode == 1 then
+return "UNLOCK"
+end
+
+
+if rtnisexist(rtn_ip) then
+str_len = string.len(str_scpi)
+ip = string.sub(str_scpi,13,len)
+print(ip)
+return eth_modify(ip)
+end
+end
+
+//CYL_Excution.sc
+
+function cyl_excution(param1)
+if cyl_test == 1 then
+print(" =CYL= ")
+cyl1_encode(1)
+delay(1000)
+cyl1_encode(0)
+delay(1000)
+cyl1_encode(1)
+delay(1000)
+cyl1_encode(0)
+delay(1000)
+cyl2_encode(1)
+delay(1000)
+cyl2_encode(0)
+end
+end
+
+
+function cyl1_encode(value)
+
+if value == 1 then
+mc.setdo(7,1)
+mc.setdo(8,0)
+end
+
+if value == 2 then
+mc.setdo(7,0)
+mc.setdo(8,1)
+end
+
+if value == 0 then
+mc.setdo(7,0)
+mc.setdo(8,0)
+end
+
+end
+
+function cyl1_decode(param1)
+upstate = mc.getdi(2)
+downstate = mc.getdi(3)
+print("UP:", upstate,"DOWN:",downstate)
+if upstate == 0 and downstate == 1 then
+return "UP"
+end
+if downstate == 0 and upstate == 1then
+return "DOWN"
+end
+
+if upstate + downstate == 2 then
+return "MID"
+end
+
+return "CYL ERROR"
+end
+
+
+
+//LED_Excution.sc
+
+function led_excution(param1)
+
+if led_test ==1 then
+print(" =LED= ")
+delay(1000)
+led_encode(1)
+delay(1000)
+led_encode(2)
+delay(1000)
+led_encode(3)
+delay(1000)
+led_encode(0)
+end
+end
+
+
+function led_encode(index)
+if index == 1 then
+mc.setdo(10,1)
+mc.setdo(11,0)
+mc.setdo(12,0)
+return "RED OK"
+elseif index == 2 then
+mc.setdo(10,0)
+mc.setdo(11,1)
+mc.setdo(12,0)
+return "GREEN OK"
+elseif index == 3 then
+mc.setdo(10,0)
+mc.setdo(11,0)
+mc.setdo(12,1)
+return "YELLOE OK"
+elseif index == 0 then
+mc.setdo(10,0)
+mc.setdo(11,0)
+mc.setdo(12,0)
+return "OFF OK"
+end
+return "LED ERROR"
+end
+
+function led_decode(index)
+red = mc.getdo(10)
+green = mc.getdo(11)
+yellow = mc.getdo(12)
+
+all = red + green + yellow
+if red == 1 then
+return "RED"
+end
+
+if green == 1 then
+return "GREEN"
+end
+
+if yellow == 1 then
+return "YELLOW"
+end
+
+if all == 0 then
+return "OFF"
+end
+return "LED ERROR"
+end
+
+function led_redflash()
+led_encode(1)
+delay(250)
+led_encode(0)
+delay(250)
+led_encode(1)
+delay(250)
+end
+
+//AUX_FUNC.sc
+
+function rtnisexist(rtn)
+if rtn == nil then
+return false
+end
+if rtn ~= nil then
+return true
+end
+end
+
+
+
+//Motion_Excution.sc
+ghomingstartflag = 0 
+
+
+function motion_excution(param1)
+if motion_test == 1 then
+print(" =MOTION= ")
+rtn = motion_abs(100,100,100,100)
+print(rtn)
+rtn = motion_abs(0,100,100,100)
+print(rtn)
+end
+end
+
+
+
+function motion_encode(value)
+pos = value
+
+return pos
+end
+
+
+function motion_home()
+local runflag = 1
+rtn1 = scpi_cyl_excution("CONF:CYL1 UP") 		
+if rtn1 == "UP" then
+while runflag > 0 do
+if ghomingstartflag == 0 then
+print("Start Homing")
+mc.movrel(axis,50,0.5,100,100)
+delay(500)
+ghomingstartflag = 1 
+rtn = mc.axissts(1,0)
+print("==[AxisSts][Busy:",rtn,"]==")
+rtn = mc.homeaxis(1)
+print("==[AxisHome]", rtn, "==")
+end
+if mc.ishomeaxisok(1) > 0 then
+print("Homing OK")
+mc.movstop(1,0)
+delay(100)
+ghomingstartflag = 0
+runflag = 0
+end
+end
+motion_abs(-60,50,100,100) 
+ext_resetok(500) 
+end
+end
+
+
+function motion_home1()
+rtn = mc.homeaxis(1)
+print("======HOME=====",rtn)
+rtn = mc.ishomeaxisok(1)
+print("======HOME=====",rtn)
+count = 0
+countmax = 100
+while count < countmax do
+rtn = mc.axissts(axis,0)
+if rtn == 0 then
+return "MOTION COMPLETE"
+end
+count = count + 1
+delay(100)
+end
+return"MOTION ERROR"
+end
+
+
+function motion_abs(pos, vel, acc, dec)
+pos = motion_encode(pos)
+vel = motion_encode(vel)
+acc = motion_encode(acc)
+dec = motion_encode(dec)
+rtn = mc.movabs(axis,vel,pos,acc,dec)
+print("======POS=====",pos, vel)
+count = 0
+countmax = pos/vel+30
+while count < countmax do
+rtn = mc.axissts(axis,0)
+if rtn == 0 then
+return "MOTION COMPLETE"
+end
+count = count + 1
+delay(100)
+end
+return"MOTION ERROR"
+end
+
+
+function motion_decode(param1)
+rtn = mc.axissts(axis,0)
+if rtn == 0 then
+pos = mc.getpos(1,1)
+print("+++",pos,axis_aim_pos)
+if pos == motion_encode(axis_aim_pos) then
+return "CLOSE OK"
+end
+if pos == motion_encode(axis_zero_pos) then
+return "OPEN OK"
+end
+return "SERVO ERROR"
+else
+return "RUNING"
+end
+end
+
+function motion_close(param1)
+rtn = motion_abs(axis_aim_pos,axis_aim_vel,axis_aim_acc,axis_aim_dec)
+return rtn
+end
+
+function motion_open(param1)
+rtn = motion_abs(axis_zero_pos,axis_aim_vel,axis_aim_acc,axis_aim_dec)
+return rtn
+end
+
+
+
+
+//ETH_Excution.sc
+
+grddata = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+
+
+function eth_connect(netidx, gprototype)
+grtn = net.netclose(netidx)
+delay(10)
+grtn = net.netopen(netidx,5000,"192.168.1.110",10,gprototype)
+print("***************ETH CONNECT***********************")
+if grtn ~= 0 then
+print("net open error")
+print(grtn)
+end
+ginitflag = 1
+gnetinitedflag = 0
+end
+
+
+function eth_disconnect(netidx, gprototype)
+if gnetinitedflag > 0 then
+print("***************ETH DISCONNECT***********************")
+grtn = net.netclose(netidx)
+delay(10)
+grtn = net.netopen(netidx,5000,"192.168.1.110",10,gprototype)
+if grtn ~= 0 then
+print("net open error")
+print(grtn)
+end
+gnetinitedflag = 0
+end
+end
+
+
+
+
+function eth_read(netidx)
+local recbuf = ""
+local grtn = 0				
+local grlen = 0				
+
+if net.netsts(netidx) > 0 then
+gnetinitedflag = 1
+grlen,grtn = net.netread(netidx,grddata,32)
+if grlen > 0 then
+recbuf = ""
+for i=1,grlen,1 do
+recbuf = recbuf..string.char(grddata[i])
+end
+print(recbuf)
+end
+return recbuf
+end
+end
+
+
+function eth_write(netidx, scpi_recv)
+local grlen = 0
+if net.netsts(netidx) > 0 then
+gnetinitedflag = 1
+grlen, grtn = net.netwritestr(netidx,scpi_recv)
+delay(5)
+end
+end
+
+
+function eth_modify(ip)
+local dot_array = {1,1,1,1}
+local ip_array = {"0","0","0","0"}
+local array_index = 1
+local dot_index = 0
+
+ip_len = string.len(ip) -2
+for i=1,ip_len,1 do
+ip_ascii = string.byte(ip,i)
+if ip_ascii == 46 then
+dot_array[array_index] = i
+array_index = array_index +1
+end
+end
+ip_array[1] = string.sub(ip,1,dot_array[1]-1)
+ip_array[2] = string.sub(ip,dot_array[1]+1,dot_array[2]-1)
+ip_array[3] = string.sub(ip,dot_array[2]+1,dot_array[3]-1)
+ip_array[4] = string.sub(ip,dot_array[3]+1,ip_len)
+for i=1,4,1 do
+ip_num_len = string.len(ip_array[i])
+if ip_num_len >3 then
+return "ETH ERROR"
+end
+end
+
+str_ip = string.format("%s.%s.%s.%s",ip_array[1],ip_array[2],ip_array[3],ip_array[4])
+str_dsn = string.format("%s.%s.%s.%s",ip_array[1],ip_array[2],ip_array[3],"1")
+
+mask_flag = tonumber(ip_array[1])
+if mask_flag < 128 then
+str_mask = "255.0.0.0"
+elseif mask_flag<192 and mask_flag>=128 then
+str_mask = "255.255.0.0"
+elseif mask_flag<224 and mask_flag>=192 then
+str_mask = "255.255.255.0"
+end
+eth_write(0,string.format("ETH OK %s", str_ip))
+delay(10)
+net.netsetip(1,str_ip,str_dsn,str_mask)
+return "ETH OK"
+end
+
