@@ -68,8 +68,20 @@ function ext_StartTest(times)
 	
 	btnStartTestNum = btnStartTest1 + btnStartTest2
 	if btnStartTestNum == 0 then 
-		gTestStep = 2 // 外部IO触发，进入自动测试状态
-		print("==============EXT START===============")
+		if gModeState == 0 then  // 常规测试状态判定
+			gTestStep = 1 // 外部IO触发，进入自动测试状态
+			print("==============EXT TEST START===============")
+        end
+		
+		if gModeState == 1 then // 常规校准状态判定
+			gCalStep = 2 // 外部IO触发，进入自动校准状态
+			print("==============EXT CAL START===============")
+        end
+		
+		if gModeState == 2 then // 常规点检状态判定
+			gPiStep = 2 // 外部IO触发，进入自动点检状态
+			print("==============EXT CAL START===============")
+        end
     end
 end
 
@@ -95,8 +107,20 @@ function ext_StopTest(times)
 	
 	btnStopTestNum = btnStopTest1 + btnStopTest2
 	if btnStopTestNum == 0 then 
-		gTestStep = 3 // 外部IO触发，退出测试状态
-		print("==============EXT STOP===============")
+		if gModeState == 0 then  // 常规测试状态判定
+			gTestStep = 3 // 外部IO触发，停止自动测试状态
+			print("==============EXT TEST START===============")
+        end
+		
+		if gModeState == 1 then // 常规校准状态判定
+			gCalStep = 3 // 外部IO触发，停止自动校准状态
+			print("==============EXT CAL START===============")
+        end
+		
+		if gModeState == 2 then // 常规点检状态判定
+			gPiStep = 3 // 外部IO触发，停止自动点检状态
+			print("==============EXT CAL START===============")
+        end
     end
 end
 

@@ -210,8 +210,6 @@ end
 
 function motion_home()
 local runflag = 1
-rtn1 = scpi_cyl_excution("CONF:CYL1 UP") 		
-if rtn1 == "UP" then
 while runflag > 0 do
 if ghomingstartflag == 0 then
 print("Start Homing")
@@ -233,7 +231,6 @@ end
 end
 motion_abs(-60,50,100,100) 
 ext_resetok(500) 
-end
 end
 
 
@@ -1162,10 +1159,10 @@ axis = 1
 axis_guide = 20 
 axis_equivalent = 36000 
 
-position_mode1 = 198.26 
+position_mode1 = 197.91 
 
 
-axis_aim_pos = 198.26
+axis_aim_pos = 197.91
 
 axis_zero_pos = -60
 
@@ -1223,7 +1220,7 @@ sminit()
 end
 delay(1)
 
-btn_emerged()
+
 
 ext_starttest(50)   	
 ext_startreset(50) 	
@@ -1376,6 +1373,11 @@ function smstep3()
 delay(10)
 scpi_led_excution("CONF:LED GREEN")
 gsmstep = 4	
+
+
+
+
+
 end
 
 function smstep4() 	
@@ -1530,8 +1532,6 @@ eth_write(0,"EMERGENCY")
 led_redflash()
 gsmstep = 5
 gteststep = 0
-gcalstep = 0
-mc.runstop()
 mc.movstop(axis)
 end
 end

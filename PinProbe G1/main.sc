@@ -10,10 +10,10 @@ axis = 1
 axis_guide = 20 // 导程
 axis_equivalent = 36000 // 单圈脉冲数
 
-position_mode1 = 198.26 // 新被测件位置
+position_mode1 = 197.91 // 新被测件位置
 
 // 配置单轴运行的关门位置
-axis_aim_pos = 198.26
+axis_aim_pos = 197.91
 // 配置单轴运行的开门位置
 axis_zero_pos = -60
 
@@ -71,11 +71,9 @@ function task2_main()
 		end
 		delay(1)
 		// 外部操作区域
+	
+		//  非系统外部急停
 		btn_emerged()
-
-		ext_StartTest(50)   	// 开始测试
-		ext_StartReset(50) 	// 开始复位
-		ext_StopTest(50)	// 停止测试
 		
 		// 模式选择
 		gModeOldState = gModeState
@@ -85,6 +83,11 @@ function task2_main()
 		if gModeOldState ~= gModeState then
 			eth_write(0,gModeStateList[gModeState+1])
 		end
+		
+		ext_StartTest(50)   	// 开始测试
+		ext_StartReset(50) 	// 开始复位
+		ext_StopTest(50)	// 停止测试
+		
 	end
 end
 

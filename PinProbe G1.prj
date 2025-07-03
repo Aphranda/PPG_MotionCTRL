@@ -6,8 +6,8 @@
     <PrjLastModTime>0</PrjLastModTime>
     <PrjDesc>用于PinProbe G1的自动化控制</PrjDesc>
     <PrjAuthor>DL</PrjAuthor>
-    <PrjPath>C:/Users/Aphranda/Desktop/20250703NOAIRCup</PrjPath>
-    <PrjStorePath>C:/Users/Aphranda/Desktop/20250703NOAIRCup//PinProbe G1//</PrjStorePath>
+    <PrjPath>C:/Users/Aphranda/Desktop/20250605</PrjPath>
+    <PrjStorePath>C:/Users/Aphranda/Desktop/20250605//PinProbe G1//</PrjStorePath>
     <SOR1>ETH_Excution.sc</SOR1>
     <SOR2>Motion_Excution.sc</SOR2>
     <SOR3>AUX_FUNC.sc</SOR3>

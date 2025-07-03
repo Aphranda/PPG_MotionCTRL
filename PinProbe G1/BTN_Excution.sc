@@ -94,9 +94,9 @@ function btn_emerged()
 		led_Redflash()
 		gSMStep = 5
 		gTestStep = 0
-		gCalStep = 0
-		mc.Runstop()
 		mc.movstop(axis)
+		mc..RunStop()
+		return 1
     end
 end
 
