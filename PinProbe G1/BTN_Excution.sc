@@ -130,8 +130,6 @@ end
 function check_emerage(param1)
 	stop_sig = mc.getdi(14)
 	if stop_sig == 0 then
-		print("E_STOP")
-		print("STOP_SIG:",stop_sig)
 		mc.movstop(axis)
 	end
 end
