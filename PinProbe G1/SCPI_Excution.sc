@@ -202,6 +202,7 @@ function scpi_lock_excution(str_scpi)
 		mc.setdo(2,0)
 		// 手动模式开启，进行初始化
 		rtn_off = 0
+		
 		motion_home()
 		
 		

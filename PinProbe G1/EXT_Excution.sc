@@ -91,7 +91,6 @@ function ext_StartReset(times)
 	btnStartReset2 = mc.getdi(10)
 	
 	btnStartResetNum = btnStartReset1 + btnStartReset2
-	
 	if btnStartResetNum == 0 then
 		motion_home()
 		print("==============EXT HOME===============")

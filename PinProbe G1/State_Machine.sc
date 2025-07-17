@@ -12,6 +12,8 @@ gModeState = 0
 gModeOldState = 0
 gModeStateList = {"AT", "CAL", "PI"}
 
+TestMachine_AutoCheck = 0 // 默认为手动状态
+
 function SmInit() 	// 状态机初始化
 		// 如果未回零，则进行回零操作
 
