@@ -1,4 +1,4 @@
-Sysopt(1, 1, -1)
+Sysopt(1, 0, -1)
 
 gInitFlag = 0
 gNetInitedFlag = 0
@@ -105,7 +105,10 @@ function task3_main()
 		end
 		// 急停触发状态
 		btn_emerged()
+		// 检查是否在零位
 		check_zero()
+		// 检查急停是否触发
+		check_emerage()
 	end
 end
 

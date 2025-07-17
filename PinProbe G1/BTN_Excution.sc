@@ -25,7 +25,9 @@ function allBtnIsPress(times)
 	count = 0
 	countMax = times*10
 	btn_num = btnLState + btnRState
-	if btn_num == 0  then 
+	TestMachine_AutoCheck = check_auto()
+	// 必须手动开启才能按按钮
+	if btn_num == 0  and TestMachine_AutoCheck == 0 then 
 		while count < countMax and count > - countMax do 
 				btnLState = mc.getdi(4)
 				btnRState = mc.getdi(5)
@@ -59,7 +61,9 @@ function anyBtnIsPress(times)
 	count = 0
 	countMax = times*10
 	btn_num = btnLState + btnRState
-	if btn_num == 1 then 
+	TestMachine_AutoCheck = check_auto()
+	// 必须手动开启才能按按钮
+	if btn_num == 1 and TestMachine_AutoCheck == 0 then 
 		while count < countMax and count > - countMax do 
 			btnLState = mc.getdi(4)
 			btnRState = mc.getdi(5)
@@ -113,4 +117,21 @@ function btn_laser()
     end
 end
 
+// 手动自动切换
+function check_auto(param1) 
+	auto_io = mc.getdi(15)
+	if auto_io == 0 then
+		return 1
+	else
+		return 0
+	end
+end
 
+function check_emerage(param1)
+	stop_sig = mc.getdi(14)
+	if stop_sig == 0 then
+		print("E_STOP")
+		print("STOP_SIG:",stop_sig)
+		mc.movstop(axis)
+	end
+end

@@ -66,7 +66,8 @@ function ext_StartTest(times)
 	delay(times)
 	btnStartTest2 = mc.getdi(9)
 	btnStartTestNum = btnStartTest1 + btnStartTest2
-	if btnStartTestNum == 0 then 
+	TestMachine_AutoCheck = check_auto()
+	if btnStartTestNum == 0 and TestMachine_AutoCheck == 1then 
 		gTestStep = 2 // 外部IO触发，进入自动测试状态
 		print("==============EXT START===============")
     end
@@ -79,7 +80,6 @@ function ext_StartReset(times)
 	btnStartReset2 = mc.getdi(10)
 	
 	btnStartResetNum = btnStartReset1 + btnStartReset2
-	
 	if btnStartResetNum == 0 then
 		motion_home()
 		print("==============EXT HOME===============")

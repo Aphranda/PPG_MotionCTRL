@@ -41,9 +41,12 @@ function motion_home()
 				delay(100)
 				gHomingStartFlag = 0
 				runFlag = 0
+				led_encode(0)
             end
         end
 		motion_abs(-60,50,100,100) // 偏置
+		gTestStep = 0
+		gSMStep = 0
 		ext_ResetOK(500) // 复位完成，给外部脉冲信号
 	end
 end
@@ -121,9 +124,11 @@ function check_zero(param1)
 	if (pos_Zero +60)<0.1 then 
 		mc.setdo(9,1)
     end
-	if (pos_Zero +60) >1 then 
+	if (pos_Zero +60) >0.2 then 
 		mc.setdo(9,0)
     end
 end
+
+
 
 
