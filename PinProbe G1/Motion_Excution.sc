@@ -69,6 +69,7 @@ end
 
 // µ¥ÖáÔËĞĞ pos-mm,vel-mm/s,acc&dec mm^2/s
 function motion_abs(pos, vel, acc, dec)
+	check_move(pos)
 	pos = motion_encode(pos)
 	vel = motion_encode(vel)
 	acc = motion_encode(acc)
@@ -122,6 +123,12 @@ function check_zero(param1)
 		mc.setdo(9,1)
     end
 	if (pos_Zero +60) >1 then 
+		mc.setdo(9,0)
+    end
+end
+
+function check_move(pos) 
+	if pos > -60 then 
 		mc.setdo(9,0)
     end
 end
