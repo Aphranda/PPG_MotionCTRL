@@ -106,12 +106,12 @@ function ext_modeSelect(times)
 	mode2 = mc.getdi(13)
 	
 	// 校准模式
-	if mode1 == 0 and mode2 == 1 then 
+	if mode1 == 1 and mode2 == 0 then 
 		gModeState = 1
     end
 	
 	// 点检模式
-	if mode1 == 1 and mode2 == 0 then
+	if mode1 == 0 and mode2 == 1 then
 		gmodeState = 2	
 	end
 	
