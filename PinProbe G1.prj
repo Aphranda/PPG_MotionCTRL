@@ -6,13 +6,8 @@
     <PrjLastModTime>0</PrjLastModTime>
     <PrjDesc>用于PinProbe G1的自动化控制</PrjDesc>
     <PrjAuthor>DL</PrjAuthor>
-<<<<<<< HEAD
-    <PrjPath>C:/Users/Aphranda/Desktop/20250703NOAIRCup</PrjPath>
-    <PrjStorePath>C:/Users/Aphranda/Desktop/20250703NOAIRCup//PinProbe G1//</PrjStorePath>
-=======
     <PrjPath>E:/OneDrive/4.Code/GCN/20250703NOAIRCup</PrjPath>
     <PrjStorePath>E:/OneDrive/4.Code/GCN/20250703NOAIRCup//PinProbe G1//</PrjStorePath>
->>>>>>> 0fbc4e4 (fix Zero Lock)
     <SOR1>ETH_Queue.sc</SOR1>
     <SOR2>EXT_Excution.sc</SOR2>
     <SOR3>BTN_Excution.sc</SOR3>
