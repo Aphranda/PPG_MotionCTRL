@@ -99,7 +99,7 @@ function btn_emerged()
 		gSMStep = 5
 		gTestStep = 0
 		mc.movstop(axis)
-		mc..RunStop()
+		mc.RunStop()
 		return 1
     end
 end

@@ -11,10 +11,10 @@ axis = 1
 axis_guide = 20 // 导程
 axis_equivalent = 36000 // 单圈脉冲数
 
-position_mode1 = 197.91 // 新被测件位置
+position_mode1 = 198.26 // 新被测件位置
 
 // 配置单轴运行的关门位置
-axis_aim_pos = 197.91
+axis_aim_pos = 198.26
 // 配置单轴运行的开门位置
 axis_zero_pos = -60
 
