@@ -135,12 +135,4 @@ function check_emerage(param1)
 		mc.movstop(axis)
 	end
 end
-<<<<<<< HEAD
-=======
-function check_emerage(param1)
-	stop_sig = mc.getdi(14)
-	if stop_sig == 0 then
-		mc.movstop(axis)
-	end
-end
->>>>>>> 0fbc4e4 (fix Zero Lock)
+
