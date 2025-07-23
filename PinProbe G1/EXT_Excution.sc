@@ -66,7 +66,9 @@ function ext_StartTest(times)
 	delay(times)
 	btnStartTest2 = mc.getdi(9)
 	btnStartTestNum = btnStartTest1 + btnStartTest2
+	print("btnStartTestNum", btnStartTestNum)
 	TestMachine_AutoCheck = check_auto()
+	print("TestMachine_AutoCheck",TestMachine_AutoCheck)
 	if btnStartTestNum == 0 and TestMachine_AutoCheck == 1 then 
 		if gModeState == 0 then  // 常规测试状态判定
 			gTestStep = 1 // 外部IO触发，进入自动测试状态

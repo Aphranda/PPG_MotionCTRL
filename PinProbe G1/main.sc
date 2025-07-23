@@ -1,4 +1,4 @@
-Sysopt(1, 0, -1)
+Sysopt(1, 1, -1)
 
 gInitFlag = 0
 gNetInitedFlag = 0
